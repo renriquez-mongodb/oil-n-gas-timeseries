@@ -1,5 +1,5 @@
 services:
-  lab-runner:
+  workshop:
     image: mcr.microsoft.com/devcontainers/universal:2
     volumes:
       - ../..:/workspaces:cached

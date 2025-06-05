@@ -1,6 +1,7 @@
 {
   "name": "MongoDB Timeseries Workshop",
   "dockerComposeFile": "docker-compose.yml",
+  "service": "workshop",
   "hostRequirements": {
       "cpus": 4
   },
