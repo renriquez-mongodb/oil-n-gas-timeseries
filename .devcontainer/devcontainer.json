@@ -1,0 +1,22 @@
+{
+  "name": "MongoDB Timeseries Workshop",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "features": {
+    "mongo": {
+      "version": "8.0"
+    }
+  },
+  "postCreateCommand": "pip install pymongo matplotlib pandas",
+  "forwardPorts": [
+    27017
+  ],
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
