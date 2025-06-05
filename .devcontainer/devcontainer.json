@@ -1,11 +1,10 @@
 {
   "name": "MongoDB Timeseries Workshop",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "workshop",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
   "hostRequirements": {
       "cpus": 4
   },
-  "updateContentCommand": "python3 -m pip install -r requirements.txt",
+  "postCreateCommand": "pip install pymongo matplotlib pandas",
   "forwardPorts": [
     27017
   ],
