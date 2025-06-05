@@ -1,12 +1,10 @@
 {
   "name": "MongoDB Timeseries Workshop",
-  "image": "mcr.microsoft.com/devcontainers/python:3.10",
-  "features": {
-    "mongo": {
-      "version": "8.0"
-    }
+  "dockerComposeFile": "docker-compose.yml",
+  "hostRequirements": {
+      "cpus": 4
   },
-  "postCreateCommand": "pip install pymongo matplotlib pandas",
+  "updateContentCommand": "python3 -m pip install -r requirements.txt",
   "forwardPorts": [
     27017
   ],
@@ -14,8 +12,10 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-python.python",
-        "ms-azuretools.vscode-docker"
+          "ms-python.python",
+          "ms-toolsai.jupyter",
+          "ms-tools.vscode-jupyter",
+          "mongodb.mongodb-vscode"
       ]
     }
   }
