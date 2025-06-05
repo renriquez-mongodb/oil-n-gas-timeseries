@@ -1,0 +1,16 @@
+theConnectors:
+  - name: mongodb-timeseries-sink
+    connector.class: com.mongodb.kafka.connect.MongoSinkConnector
+    tasks.max: 1
+    topics: sensor_readings_topic
+    connection.uri: mongodb://localhost:27017
+    database: timeseries_workshop
+    collection: ts_kafka
+    key.converter: org.apache.kafka.connect.storage.StringConverter
+    value.converter: org.apache.kafka.connect.json.JsonConverter
+    value.converter.schemas.enable: false
+    behavior.on.null.values: ignore
+    # Timeseries options
+    timeseries.time.field: timestamp
+    timeseries.meta.field: metadata
+    timeseries.granularity: seconds
